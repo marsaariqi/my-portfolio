@@ -1,7 +1,7 @@
 
 import ClientAbout from '@/components/client/ClientAbout';
 
-const page = () => {
+const Page = () => {
     return (
         <>
             <ClientAbout />
@@ -9,4 +9,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

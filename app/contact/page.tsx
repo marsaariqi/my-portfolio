@@ -2,10 +2,10 @@
 
 import ClientContact from '@/components/client/ClientContact';
 
-const page = () => {
+const Page = () => {
     return (
         <ClientContact />
     )
 }
 
-export default page
+export default Page

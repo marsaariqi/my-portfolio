@@ -1,9 +1,9 @@
 import ClientProjects from "@/components/client/ClientProjects"
 
-const page = () => {
+const Page = () => {
     return (
         <ClientProjects />
     )
 }
 
-export default page
+export default Page

@@ -9,9 +9,8 @@ import { Suspense, useEffect, useState } from 'react'
 import Loading from './loading'
 
 
-const page = () => {
+const Page = () => {
     const [activePage, setActivePage] = useState<'home' | 'about' | 'projects' | 'contact'>('home');
-
     const [authAwbibib, setAuthAwbibib] = useState(false);
 
 
@@ -66,4 +65,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

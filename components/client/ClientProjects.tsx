@@ -126,9 +126,8 @@ const ClientProjects = () => {
                             >
                                 {!isLoading ? (
                                     <>
-                                        {projectData.toReversed().map((prj) => (
-                                            <AnimatePresence>
-
+                                        <AnimatePresence>
+                                            {projectData.toReversed().map((prj) => (
                                                 <motion.li
                                                     initial={{ opacity: 0, scale: 0.7 }}
                                                     animate={{ opacity: 1, scale: 1 }}
@@ -159,8 +158,8 @@ const ClientProjects = () => {
                                                         </div>
                                                     </div>
                                                 </motion.li>
-                                            </AnimatePresence>
-                                        ))}
+                                            ))}
+                                        </AnimatePresence>
                                     </>
                                 ) : (
                                     <>
