@@ -5,6 +5,8 @@ import Starfield from 'react-starfield';
 import NavBar from "@/components/client/NavBar";
 import CFooter from "@/components/client/Footer";
 import UnderConstruction from "@/components/UnderConstruction";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const poppins = Poppins({ weight: "400", subsets: ['latin'] });
 const imageUrl = 'https://marsaariqi.my.id/preview.jpg';
@@ -44,6 +46,7 @@ export default function RootLayout({
           {children}
         </div>
         <CFooter />
+        <Analytics />
       </body>
     </html>
   );
