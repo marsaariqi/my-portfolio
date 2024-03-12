@@ -27,8 +27,11 @@ export default function RootLayout({
         <meta property="og:image" content={imageUrl} />
         <meta property="og:url" content="marsaariqi.my.id" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="" />
 
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content={imageUrl} />
         <meta name="twitter:creator" content="@fishercore"></meta>
       </head>
       <body className={`${poppins.className} overflow-x-clip`}>

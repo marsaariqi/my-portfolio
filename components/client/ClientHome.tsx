@@ -90,7 +90,7 @@ const ClientHome = () => {
             } finally {
                 setIsLoading(false);
             }
-        }, 4000);
+        }, 2900);
 
         return () => clearTimeout(timeoutId);
     }, []);
