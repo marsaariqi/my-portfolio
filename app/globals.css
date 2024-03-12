@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Target WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+	width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (the area on which the thumb scrolls) */
+::-webkit-scrollbar-track {
+	background: #303031; /* Color of the track */
+	border-radius: 8px; /* Rounded corners */
+}
+
+/* Handle (the draggable scrolling element) */
+::-webkit-scrollbar-thumb {
+	background: oklch(0.747039 0.158278 39.94703 / 1); /* Color of the handle */
+	border-radius: 8px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #909090; /* Color of the handle on hover */
+}
+
+.project-container {
+	transform: rotateX(180deg); /* Flips the container horizontally */
+}
+
+.card-container {
+	transform: rotateX(180deg);
+}
+
+.icon-flip {
+	transform: scaleX(-1);
+}
