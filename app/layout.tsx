@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html data-theme="sunset" lang="en" className="bg-black">
       <head>
-        <meta property="og:title" content="my portofolio :3" />
+        <meta property="og:title" content="my portfolio :3" />
         <meta property="og:image" content={imageUrl} />
         <meta property="og:url" content="marsaariqi.my.id" />
         <meta property="og:type" content="website" />
