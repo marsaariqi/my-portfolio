@@ -204,7 +204,7 @@ const ClientAbout = () => {
                             transition={{ type: 'spring', duration: 1, bounce: 0.3, }}
                             className='text-4xl md:text-5xl px-10 mb-16 mx-auto max-w-5xl'>
                             <h1 className='text-gray-50 hover:text-primary hover:ease-in-out hover:duration-300 text-right sm:text-center text-pretty font-semibold cursor-default leading-[1.1]'>
-                                This is just a <span className='text-warning'>glimpse</span> of my <span className='text-success '>skills</span> and <span className='text-success'>development tools.</span> <br /> They extend far <span className='text-warning'>beyond</span> what's shown <span className='text-warning'>below,</span> and I'm always eager to learn  <span className='text-warning'>new </span>stuff!
+                                This is just a <span className='text-warning'>glimpse</span> of my <span className='text-success '>skills</span> and <span className='text-success'>development tools.</span> <br /> They extend far <span className='text-warning'>beyond</span> what's shown <span className='text-warning'>below,</span> and I'm always eager to learn <span className='text-warning'>new </span>stuff!
                             </h1>
                         </motion.div>
                     </AnimatePresence>
