@@ -7,7 +7,7 @@ import CFooter from "@/components/client/Footer";
 import UnderConstruction from "@/components/UnderConstruction";
 
 const poppins = Poppins({ weight: "400", subsets: ['latin'] });
-const imageUrl = '/preview.jpg';
+const imageUrl = 'https://marsaariqi.my.id/preview.jpg';
 
 
 export const metadata: Metadata = {
