@@ -76,7 +76,7 @@ const ClientAbout = () => {
                                     <AboutSkeleton />
                                 </>
                             )}
-                            {educationData.toReversed().map((education, index) => (
+                            {educationData.slice(0).reverse().map((education, index) => (
                                 <motion.li
                                     className='hover:text-accent'
                                     key={index}
@@ -142,7 +142,7 @@ const ClientAbout = () => {
                                     <AboutSkeleton />
                                 </>
                             )}
-                            {experienceData.toReversed().map((experience, index) => (
+                            {experienceData.slice(0).reverse().map((experience, index) => (
                                 <motion.li
                                     className='hover:text-success'
                                     key={index}
