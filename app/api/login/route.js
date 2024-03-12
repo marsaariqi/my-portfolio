@@ -1,5 +1,5 @@
 import connectMongoDB from "@/libs/mongodb";
-import Awbibib from "@/models/awbibibModel";
+import Awbibib from "@/models/AwbibibModel";
 import { NextResponse } from "next/server";
 import { compare, hash } from "bcryptjs";
 
