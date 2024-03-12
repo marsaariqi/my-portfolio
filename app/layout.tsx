@@ -12,7 +12,7 @@ const imageUrl = 'https://marsaariqi.my.id/preview.jpg';
 
 export const metadata: Metadata = {
   title: "marsaariqi",
-  description: "Marsa Ariqi Gustiandza Web Developer Portfolio",
+  description: "Marsa Ariqi Gustiandza Portfolio",
 };
 
 export default function RootLayout({
