@@ -1,11 +1,8 @@
 import mongoose from "mongoose";
-const options = {
-	useNewUrlParser: true,
-	// Remove useUnifiedTopology option
-};
+
 const connectMongoDB = async () => {
 	try {
-		await mongoose.connect(process.env.MONGODB_URI, options, {
+		await mongoose.connect(process.env.MONGODB_URI, {
 			useUnifiedTopology: true,
 		});
 
