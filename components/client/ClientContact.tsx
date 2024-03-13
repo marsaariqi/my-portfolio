@@ -143,6 +143,15 @@ const ClientContact = () => {
                                             placeholder="warm message"
                                             rows={4}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                            onKeyDown={(e) => {
+                                                if (e.key === 'Enter' && !e.shiftKey) {
+                                                    e.preventDefault();
+                                                    setFormData(prevFormData => ({
+                                                        ...prevFormData,
+                                                        message: prevFormData.message + '\n'
+                                                    }));
+                                                }
+                                            }}
                                             value={formData.message}
                                         />
                                     </label>

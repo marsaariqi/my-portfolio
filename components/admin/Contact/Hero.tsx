@@ -40,7 +40,7 @@ const AwContact = () => {
                                 <div className="label -mb-2">
                                     <span className="label-text">Message</span>
                                 </div>
-                                <div className="text-warning text-xl mx-5">
+                                <div className="text-warning text-xl mx-5 whitespace-pre-line">
                                     {c.message}
                                 </div>
                             </div>
