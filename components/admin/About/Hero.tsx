@@ -26,7 +26,7 @@ const AwAbout = () => {
 
     const router = useRouter();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     const handleEducationSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         if (!university.trim() || !edYear.trim() || !major.trim() || !degree.trim()) {
@@ -45,6 +45,7 @@ const AwAbout = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify(formData),
             });
@@ -90,6 +91,7 @@ const AwAbout = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify(formData),
             });
@@ -128,6 +130,9 @@ const AwAbout = () => {
         try {
             const res = await fetch(`${baseUrl}/api/education?id=${id}`, {
                 method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                }
             });
             if (res.ok) {
                 setShowToastDel(true);
@@ -152,6 +157,9 @@ const AwAbout = () => {
         try {
             const res = await fetch(`${baseUrl}/api/experience?id=${id}`, {
                 method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                }
             });
             if (res.ok) {
                 setShowToastDel(true);

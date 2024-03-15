@@ -37,7 +37,7 @@ const AwHome: React.FC = () => {
 
     const router = useRouter();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         if (!title || !summary || !title.trim() || !summary.trim()) {
@@ -56,6 +56,7 @@ const AwHome: React.FC = () => {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({ title, summary }),
                 cache: "no-store",
@@ -96,6 +97,7 @@ const AwHome: React.FC = () => {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({ favFont, totalProject, workYears }),
                 cache: "no-store",
@@ -131,6 +133,7 @@ const AwHome: React.FC = () => {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify(requestData),
                 cache: "no-store",
@@ -146,7 +149,8 @@ const AwHome: React.FC = () => {
             const response = await fetch('/api/uploadthing', {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({ url: downloadCV })
             });

@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html data-theme="sunset" lang="en" className="bg-black">
+    <html lang="en" className="bg-black">
       <head>
         <meta property="og:title" content="my portfolio :3" />
         <meta property="og:image" content={imageUrl} />

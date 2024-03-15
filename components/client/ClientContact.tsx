@@ -10,6 +10,7 @@ import ToastAlert from "../ToastAlert";
 const ClientContact = () => {
     const router = useRouter();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
     const [submitting, setSubmitting] = useState(false);
     const [showToastAlert, setShowToastAlert] = useState(false);
     const [showToastSuccess, setShowToastSuccess] = useState(false);
@@ -19,8 +20,6 @@ const ClientContact = () => {
         phone: "",
         message: ""
     });
-
-
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
@@ -34,6 +33,7 @@ const ClientContact = () => {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify(formData),
                 cache: "no-store",

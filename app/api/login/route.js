@@ -13,7 +13,7 @@ export async function POST(req) {
 	if (!checkAwbibib) {
 		return NextResponse.json({
 			success: false,
-			message: `${username} is not here:)`,
+			message: `${username ? username : "1661"} is not here:)`,
 		});
 	}
 

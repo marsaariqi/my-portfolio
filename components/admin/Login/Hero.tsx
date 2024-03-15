@@ -10,7 +10,7 @@ interface LoginAwbibibProps {
 }
 
 
-const LoginAwbibib: React.FC<LoginAwbibibProps> = ({ setAuthAwbibib }) => { // Accept setAuthAwbibib as a prop
+const LoginAwbibib: React.FC<LoginAwbibibProps> = ({ setAuthAwbibib }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');

@@ -16,7 +16,7 @@ const AwProjects = () => {
 
     const { projectData } = getProjectData();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
@@ -33,6 +33,7 @@ const AwProjects = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify(formData),
             });
@@ -62,6 +63,9 @@ const AwProjects = () => {
         try {
             const res = await fetch(`${baseUrl}/api/project?id=${id}`, {
                 method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${apiKey}`,
+                }
             });
             if (!res.ok) {
                 throw new Error('Failed to delete project entry');
@@ -78,7 +82,6 @@ const AwProjects = () => {
                 throw new Error('Failed to delete project image');
             }
 
-            // Reload the page only if both deletion operations are successful
             window.location.reload();
         } catch (error) {
             console.error('Error deleting project:', error);
@@ -90,7 +93,8 @@ const AwProjects = () => {
             const response = await fetch('/api/uploadthing', {
                 method: 'DELETE',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${apiKey}`,
                 },
                 body: JSON.stringify({ url: url })
             });
@@ -100,7 +104,7 @@ const AwProjects = () => {
             }
 
             const data = await response.json();
-            console.log(data.message); // should output "ok" if successful
+            console.log(data.message);
             setImageUrl("");
         } catch (error) {
             console.error('Error deleting file:', error);
