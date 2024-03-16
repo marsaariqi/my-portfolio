@@ -16,7 +16,7 @@ const AwProjects = () => {
 
     const { projectData } = getProjectData();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    const apiKey = process.env.NEXT_PUBLIC_API_AWBIBIB;
+    const apiKey = process.env.NEXT_PUBLIC_API_KEY_AWBIBIB;
 
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
