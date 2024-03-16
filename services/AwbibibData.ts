@@ -1,4 +1,4 @@
-const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_API_AWBIBIB;
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 interface LoginForm {

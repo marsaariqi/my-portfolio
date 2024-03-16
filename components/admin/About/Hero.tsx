@@ -26,7 +26,7 @@ const AwAbout = () => {
 
     const router = useRouter();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_API_AWBIBIB;
     const handleEducationSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         if (!university.trim() || !edYear.trim() || !major.trim() || !degree.trim()) {

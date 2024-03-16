@@ -1,5 +1,4 @@
 "use client"
-import connectMongoDB from "@/libs/mongodb";
 import { AnimatePresence, motion } from "framer-motion"
 import { useRouter } from "next/navigation";
 import { FormEventHandler, useState } from "react";
@@ -9,8 +8,8 @@ import ToastAlert from "../ToastAlert";
 
 const ClientContact = () => {
     const router = useRouter();
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const apiKey = process.env.NEXT_PUBLIC_API_AWBIBIB;
     const [submitting, setSubmitting] = useState(false);
     const [showToastAlert, setShowToastAlert] = useState(false);
     const [showToastSuccess, setShowToastSuccess] = useState(false);

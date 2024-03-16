@@ -6,16 +6,17 @@ NEXT_PUBLIC_BASE_URL= 'http://localhost:3000'
 UPLOADTHING_SECRET=
 UPLOADTHING_APP_ID=
 NEXT_PUBLIC_API_KEY=
+NEXT_PUBLIC_API_KEY_AWBIBIB=
 ```
+
+- [UPLOADTHING](https://uploadthing.com/) - Storing image and files
+- [MongoDB](https://www.mongodb.com/) - Database
 
 ## dependencies
 
 ```bash
 npm install
 ```
-
-- [`UPLOADTHING`](https://uploadthing.com/) - Storing image and files
-- [`MongoDB`](https://www.mongodb.com/) - Database
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

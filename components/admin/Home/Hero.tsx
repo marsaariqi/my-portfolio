@@ -37,7 +37,7 @@ const AwHome: React.FC = () => {
 
     const router = useRouter();
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-    const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+    const apiKey = process.env.NEXT_PUBLIC_API_AWBIBIB;
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         if (!title || !summary || !title.trim() || !summary.trim()) {
