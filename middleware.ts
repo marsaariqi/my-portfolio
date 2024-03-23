@@ -56,6 +56,8 @@ export default async function withApiKey(req: NextRequest) {
 					{ status: 405 }
 				);
 			}
+		} else {
+			return NextResponse.next();
 		}
 	}
 
