@@ -4,10 +4,10 @@ import { useEducationData, useExperienceData } from '@/services/AboutEdEx';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { BsFillPatchCheckFill } from 'react-icons/bs'
-import { FaChrome, FaCss3Alt, FaFigma, FaGitAlt, FaHtml5, FaLaravel, FaNodeJs, FaPhp, FaPython, FaReact, FaSpotify } from 'react-icons/fa'
+import { FaChrome, FaCss3Alt, FaFigma, FaGitAlt, FaHtml5, FaLaravel, FaNodeJs, FaPhp, FaPython, FaReact, FaSpotify, FaJava } from 'react-icons/fa'
 import { GrMysql } from 'react-icons/gr'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiAdobeillustrator, SiAdobephotoshop, SiMongodb, SiNextdotjs, SiNotepadplusplus, SiPostman, SiSublimetext, SiTypescript, SiVisualstudiocode } from 'react-icons/si'
+import { SiAdobeillustrator, SiAdobephotoshop, SiMongodb, SiNextdotjs, SiNotepadplusplus, SiPostman, SiSublimetext, SiTypescript, SiVisualstudiocode, SiSpringboot, SiRedis, SiIntellijidea } from 'react-icons/si'
 import AboutSkeleton from '../AboutSkeleton';
 import { useInView } from 'react-intersection-observer';
 
@@ -20,6 +20,9 @@ const skillsData = [
     { icon: FaReact, name: 'React', color: 'text-blue-500' },
     { icon: SiNextdotjs, name: 'Next.js', color: 'text-gray-50', hoverColor: 'hover:text-gray-700' },
     { icon: FaNodeJs, name: 'Node.js', color: 'text-green-500' },
+    { icon: FaJava, name: 'Java', color: 'text-sky-600' },
+    { icon: SiSpringboot, name: 'Spring Boot', color: 'text-green-600' },
+    { icon: SiRedis, name: 'Redis', color: 'text-red-500' },
     { icon: FaPhp, name: 'PHP', color: 'text-purple-500' },
     { icon: FaLaravel, name: 'Laravel', color: 'text-red-600' },
     { icon: FaPython, name: 'Python', color: 'text-green-500' },
@@ -29,6 +32,7 @@ const skillsData = [
 
 const toolsData = [
     { icon: SiVisualstudiocode, name: 'VS Code', color: 'text-blue-500', dataTip: 'Intermediate' },
+    { icon: SiIntellijidea, name: 'IntelliJ IDEA', color: 'text-gray-300', dataTip: 'Basic' },
     { icon: SiSublimetext, name: 'Sublime Text', color: 'text-yellow-300', dataTip: 'Intermediate' },
     { icon: FaChrome, name: 'Chrome', color: 'text-gray-300', hoverColor: 'hover:text-blue-400', dataTip: 'Intermediate' },
     { icon: FaGitAlt, name: 'Git', color: 'text-orange-600', dataTip: 'Basic' },
@@ -101,7 +105,7 @@ const ClientAbout = () => {
                                     >
                                         <time className="font-mono italic">{education.year}</time>
                                         <div className="text-xl font-bold text-gray-200">{education.university}</div>
-                                        <p>{education.major}</p>
+                                        <p className="font-semibold text-lg text-gray-300">{education.major}</p>
                                         <p>{education.degree}</p>
                                     </div>
                                     <hr className='bg-accent' />
@@ -167,7 +171,7 @@ const ClientAbout = () => {
                                     >
                                         <time className="font-mono italic">{experience.year}</time>
                                         <div className="text-xl font-bold text-gray-50">{experience.role}</div>
-                                        <p>{experience.company}</p>
+                                        <p className="font-semibold text-lg text-gray-300">{experience.company}</p>
                                         <p>{experience.workType}</p>
                                         <p>{experience.workSummary}</p>
                                     </div>
@@ -224,12 +228,12 @@ const ClientAbout = () => {
                                     Skills!
                                 </div>
                                 <div className='divider -mb-2' />
-                                <div className="grid grid-cols-3 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 bg-black p-6 h-full gap-x-2 gap-y-2 md:gap-y-2 w-full lg:pb-16">
+                                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 sm:grid-cols-3 2xl:grid-cols-5 bg-black p-6 h-full gap-x-2 gap-y-2 md:gap-y-4 w-full lg:pb-16">
                                     {skillsData.map((skill, index) => (
                                         <div
                                             key={index}
                                             className={`flex flex-col items-center ${skill.color} ${skill.hoverColor ? skill.hoverColor : 'hover:text-gray-50'} tooltip tooltip-accent`}
-                                            data-tip="Intermediate"
+                                            data-tip={`${skill.icon === SiSpringboot || skill.icon === SiRedis ? 'Basic' : 'Intermediate'}`}
                                         >
                                             <skill.icon size={50} className="hover:scale-105 ease-in-out duration-200 cursor-pointer" />
                                             <p className="text-gray-400">{skill.name}</p>
@@ -251,7 +255,7 @@ const ClientAbout = () => {
                                     DevTools!
                                 </div>
                                 <div className='divider -mb-2' />
-                                <div className="grid grid-cols-3 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 bg-black p-6 h-full gap-x-2 gap-y-2 md:gap-y-0 w-full lg:pb-16">
+                                <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 sm:grid-cols-3 2xl:grid-cols-5 bg-black p-6 h-full gap-x-2 gap-y-2 md:gap-y-4 w-full lg:pb-16">
                                     {toolsData.map((tool, index) => (
                                         <div key={index} className={`flex flex-col items-center ${tool.color} ${tool.hoverColor ? tool.hoverColor : 'hover:text-gray-50'} tooltip tooltip-success`} data-tip={tool.dataTip}>
                                             <tool.icon size={50} className="hover:scale-105 ease-in-out duration-200 w-fit cursor-pointer" />

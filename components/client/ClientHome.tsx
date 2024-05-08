@@ -133,7 +133,7 @@ const ClientHome = () => {
                             exit={{ x: '20%', opacity: 0 }}
                             transition={{ type: 'spring', duration: 0.8, bounce: 0.3, }}
                         >
-                            <h2 className="px-8 mt-5 text-md lg:text-lg font-semibold text-left w-fit cursor-default">Mostly <span className="text-success">Front-End</span> stuff, but I do <span className="text-accent">Full-Stack</span> sometimes☺</h2>
+                            <h2 className="px-8 mt-5 text-md lg:text-lg font-semibold text-left w-fit cursor-default">Mostly <span className="text-success">Front-End</span> stuff, but I do <span className="text-accent">Full-Stack</span> too!😁</h2>
 
                         </motion.div>
                     </AnimatePresence>

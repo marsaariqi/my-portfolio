@@ -8,7 +8,7 @@ import UnderConstruction from "@/components/UnderConstruction";
 import { Analytics } from "@vercel/analytics/react"
 
 
-const poppins = Poppins({ weight: "400", subsets: ['latin'] });
+const poppins = Poppins({ weight: ["400", "500", "600"], subsets: ['latin'] });
 const imageUrl = 'https://marsaariqi.my.id/preview.jpg';
 
 
