@@ -240,7 +240,8 @@ const AwProjects = () => {
                         </div>
                     </div>
                 </div>
-                <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-5 w-full mb-10">
+
+                <div className="grid xl:grid-cols-1 2xl:grid-cols-2 gap-5 w-full mb-10">
                     {projectData.map((prj) => (
                         <div key={prj._id} className="mockup-code h-fit ">
                             <h1 className="px-5 text-lg font-semibold">{prj.title}</h1>

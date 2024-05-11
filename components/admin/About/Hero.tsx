@@ -350,63 +350,66 @@ const AwAbout = () => {
                     </div>
                 </div>
 
-                {/* Education */}
-                <div className="mockup-browser border bg-base-300 h-fit w-full">
-                    <div className="mockup-browser-toolbar">
-                        <div className="input">Education</div>
-                    </div>
-                    <div className="grid grid-cols-1 gap-5 w-full p-5">
-                        {educationData.map((edu) => (
-                            <div key={edu._id} className="mockup-code h-fit text-lg bg-gray-800">
-                                <pre data-prefix="$"><code>University</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{edu.university}</code></pre>
-                                <pre data-prefix="$"><code>Year</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{edu.year}</code></pre>
-                                <pre data-prefix="$"><code>Major</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{edu.major}</code></pre>
-                                <pre data-prefix="$"><code>Degree</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{edu.degree}</code></pre>
-                                <div className="text-center mt-5">
-                                    <button className="btn btn-outline btn-error" onClick={() => handleEduDelete(edu._id)}>Delete</button>
-                                </div>
-                                {showToastDel && (
-                                    <div className="text-base">
-                                        <ToastAlert message="Entry Deleted!" type="error" onClose={handleCloseToast} />
+                <div className="max-w-4xl w-full gap-4 flex flex-col mx-auto">
+                    {/* Education */}
+                    <div className="mockup-browser border bg-base-300 h-fit w-full">
+                        <div className="mockup-browser-toolbar">
+                            <div className="input">Education</div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-5 w-full p-5">
+                            {educationData.map((edu) => (
+                                <div key={edu._id} className="mockup-code h-fit text-lg bg-gray-800">
+                                    <pre data-prefix="$"><code>University</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{edu.university}</code></pre>
+                                    <pre data-prefix="$"><code>Year</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{edu.year}</code></pre>
+                                    <pre data-prefix="$"><code>Major</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{edu.major}</code></pre>
+                                    <pre data-prefix="$"><code>Degree</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{edu.degree}</code></pre>
+                                    <div className="text-center mt-5">
+                                        <button className="btn btn-outline btn-error" onClick={() => handleEduDelete(edu._id)}>Delete</button>
                                     </div>
-                                )}
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
-
-                {/* Experience */}
-                <div className="mockup-browser border bg-base-300 h-fit mb-10">
-                    <div className="mockup-browser-toolbar">
-                        <div className="input">Experience</div>
-                    </div>
-                    <div className="grid grid-cols-1 gap-5 w-full p-5">
-                        {experienceData.map((exp) => (
-                            <div key={exp._id} className="mockup-code h-fit text-lg">
-                                <pre data-prefix="$"><code>Role</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{exp.role}</code></pre>
-                                <pre data-prefix="$"><code>Year</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{exp.year}</code></pre>
-                                <pre data-prefix="$"><code>Work Type</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{exp.workType}</code></pre>
-                                <pre data-prefix="$"><code>Company</code></pre>
-                                <pre data-prefix=" " className="font-bold"><code >{exp.company}</code></pre>
-                                <p className="mx-5 font-semibold mt-2 underline">Work Summary</p>
-                                <p className="text-pretty px-5 text-base">{exp.workSummary}</p>
-                                <div className="text-center mt-5">
-                                    <button className="btn btn-outline btn-error"
-                                        onClick={() => handleExpDelete(exp._id)}>Delete</button>
+                                    {showToastDel && (
+                                        <div className="text-base">
+                                            <ToastAlert message="Entry Deleted!" type="error" onClose={handleCloseToast} />
+                                        </div>
+                                    )}
                                 </div>
-                            </div>
-                        ))}
+                            ))}
 
+                        </div>
+                    </div>
+
+                    {/* Experience */}
+                    <div className="mockup-browser border bg-base-300 h-fit mb-10">
+                        <div className="mockup-browser-toolbar">
+                            <div className="input">Experience</div>
+                        </div>
+                        <div className="grid grid-cols-1 gap-5 w-full p-5">
+                            {experienceData.map((exp) => (
+                                <div key={exp._id} className="mockup-code h-fit text-lg">
+                                    <pre data-prefix="$"><code>Role</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{exp.role}</code></pre>
+                                    <pre data-prefix="$"><code>Year</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{exp.year}</code></pre>
+                                    <pre data-prefix="$"><code>Work Type</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{exp.workType}</code></pre>
+                                    <pre data-prefix="$"><code>Company</code></pre>
+                                    <pre data-prefix=" " className="font-bold"><code >{exp.company}</code></pre>
+                                    <p className="mx-5 font-semibold mt-2 underline">Work Summary</p>
+                                    <p className="text-pretty px-5 text-base">{exp.workSummary}</p>
+                                    <div className="text-center mt-5">
+                                        <button className="btn btn-outline btn-error"
+                                            onClick={() => handleExpDelete(exp._id)}>Delete</button>
+                                    </div>
+                                </div>
+                            ))}
+
+                        </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
