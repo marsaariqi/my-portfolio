@@ -1,6 +1,7 @@
 ## .env
 
 ```bash
+JWT_SECRET=
 MONGODB_URI=
 NEXT_PUBLIC_BASE_URL= 'http://localhost:3000'
 UPLOADTHING_SECRET=
